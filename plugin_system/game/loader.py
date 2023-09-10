@@ -17,8 +17,6 @@ def import_module(name: str) -> PluginInterface:
 
 
 def load_plugins(plugins: list[str]) -> None:
-    for i in range(5):
-        print(sys.path[i])
     for plug_name in plugins:
         plugin = import_module(plug_name)
         plugin.initialize()
